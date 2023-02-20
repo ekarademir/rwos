@@ -52,7 +52,7 @@ where
     T: Fn(),
 {
     fn run(&self) -> () {
-        serial_print!("{}...\t", core::any::type_name::<T>());
+        serial_print!("{}...", core::any::type_name::<T>());
         self();
         serial_println!("[ok]")
     }
